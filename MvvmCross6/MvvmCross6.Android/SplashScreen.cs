@@ -14,7 +14,7 @@ namespace MvvmCross6.Android
     // No Splash Screen: To remove splash screen, remove this class and uncomment lines in MainActivity
     [Activity(
         Label = "MvvmCross6_test"
-        //, MainLauncher = true
+        , MainLauncher = true
         , Icon = "@mipmap/icon"
         , Theme = "@style/AppTheme.Splash"
         , NoHistory = true
@@ -23,6 +23,11 @@ namespace MvvmCross6.Android
         : MvxFormsSplashScreenActivity<Setup, App, FormsApp>
         //: MvvmCross.Platforms.Android.Views.MvxSplashScreenActivity
     {
+
+        public SplashScreen()
+            : base(Resource.Layout.SplashScreen)
+        {
+        }
 
         protected override object GetAppStartHint(object hint = null)
         {

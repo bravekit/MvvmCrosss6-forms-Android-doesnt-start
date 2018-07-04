@@ -16,14 +16,14 @@ namespace MvvmCross6.Android
         Label = "MvvmCross6.Forms",
         Icon = "@mipmap/icon",
         Theme = "@style/AppTheme",
-         MainLauncher = true, // No Splash Screen: Uncomment this lines if removing splash screen
+         //MainLauncher = true, // No Splash Screen: Uncomment this lines if removing splash screen
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         LaunchMode = LaunchMode.SingleTask)]
     public class MainActivity
-        //: MvxFormsAppCompatActivity<MainViewModel>
+        : MvxFormsAppCompatActivity<EmptyViewModel>
 
     // No Splash Screen: use this base instead
-     : MvxFormsAppCompatActivity<Setup, Core.App, FormsApp, MainViewModel>
+    //: MvxFormsAppCompatActivity<Setup, Core.App, FormsApp, MainViewModel>
     {
         protected override void OnCreate(Bundle bundle)
         {
